@@ -2,7 +2,7 @@
 
 ![TechBubble IoT JumpWay Docs](images/main/IoT-Jumpway.jpg)  
 
-##Introduction
+## Introduction
 
 The Internet of Things (IoT) JumpWay is an IoT PaaS that allows anyone to connect IoT devices such as Raspberry Pi, Intel, Arduino, ESP8266 and even phones, PCs, Macs and laptops to the Internet of Things. The IoT JumpWay examples allow you to connect devices and sensors to the IoT JumpWay and control/monitor sensors/actuators and data to and from the devices.
 
