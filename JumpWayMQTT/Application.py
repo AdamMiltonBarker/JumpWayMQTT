@@ -200,6 +200,24 @@ class ApplicationConnection():
 			deviceStatusTopic = '%s/Applications/%s/Status' % (self._configs['locationID'], self._configs['applicationID'])
 			self.mqttClient.publish(deviceStatusTopic,data)
 			print("Published to Application Status "+deviceStatusTopic)
+			
+	def publishToApplicationChannel(self, channel, application, data):
+        
+		if self._configs['locationID'] == None:
+    			
+			print("** Location ID (locationID) is required!")
+			return False
+
+		elif application == None:
+
+			print("** Application ID (application) is required!")
+			return False
+
+		else:
+    			
+			applicationChannel = '%s/Applications/%s/%s' % (self._configs['locationID'], application, channel)
+			self.mqttClient.publish(applicationChannel,json.dumps(data))
+			print("Published to Application "+channel+" Channel")
 	
 	def subscribeToApplicationChannel(self, applicationID, channelID, qos=0):
 
